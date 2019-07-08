@@ -1,0 +1,26 @@
+:host{
+
+  display: block;
+  font-family: Arial;
+  font-size: 12px;
+
+  .grid-container {
+    display: table;
+    padding: 20px;
+    border-collapse:collapse;
+  }
+
+  .row {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    display: table-row;
+  }
+
+  .row-header {
+    font-weight: bold;
+  }
+
+  .column {
+    padding: 10px 50px 10px 10px;
+    display: table-cell;
+  }
+}

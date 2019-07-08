@@ -1,0 +1,12 @@
+<ng-container *ngIf="gridData$ | async as gridData">
+  <input type="text" placeholder="Search by name" [(ngModel)]="searchVal">
+  <button (click)="search(searchVal)">Search</button>
+  <div class="grid-container">
+    <div class="row row-header">
+      <div class="column" *ngFor="let column of gridData.columns | sort: 'ascending'">{{ column.columnName }}</div>
+    </div>
+    <div class="row" *ngFor="let row of gridData.rows | filter: gridData.searchBy: searchByValue">
+      <div class="column" *ngFor="let column of gridData.columns | sort: 'ascending'">{{ row[column.entityId] }}</div>
+    </div>
+  </div>
+</ng-container>
