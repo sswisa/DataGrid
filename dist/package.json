@@ -2,25 +2,13 @@
   "name": "@sswisa/grid",
   "version": "0.0.1",
   "license": "MIT",
-  "scripts": {
-    "ng": "ng",
-    "start": "node server.js",
-    "build": "ng build --prod",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "preinstall": "npm install @angular/cli @angular/compiler-cli typescript",
-    "postinstall": "ng build --prod",
-    "heroku-postinstall": "ng build --prod",
-    "packagr": "ng-packagr -p ng-package.json"
-  },
   "engines": {
     "node": "6.10.3",
     "npm": "3.10.10"
   },
   "private": false,
   "dependencies": {
-
+    "tslib": "^1.7.1"
   },
   "devDependencies": {
     "@angular/core": "^5.0.0",
@@ -58,5 +46,15 @@
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
     "typescript": "^2.9.2"
-  }
+  },
+  "main": "bundles/sswisa-grid.umd.js",
+  "module": "fesm5/sswisa-grid.js",
+  "es2015": "fesm2015/sswisa-grid.js",
+  "esm5": "esm5/sswisa-grid.js",
+  "esm2015": "esm2015/sswisa-grid.js",
+  "fesm5": "fesm5/sswisa-grid.js",
+  "fesm2015": "fesm2015/sswisa-grid.js",
+  "typings": "sswisa-grid.d.ts",
+  "metadata": "sswisa-grid.metadata.json",
+  "sideEffects": false
 }
